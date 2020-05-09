@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 
 
+"""File with functions."""
+
+
 import prompt
 
 
 def welcome_user():
-    """ func asks and prints user`s name"""
-    print()
+    """Func asks user`s name.
+
+    Returns:
+        greeting and user`s name.
+    """
     name = prompt.string('May I have your name? ')
-    print('Hello, {}!'.format(name))
+    return '\nHello, {0}!'.format(name)
 
 
 def main():
