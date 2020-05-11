@@ -17,7 +17,7 @@ def welcome_user():
     return '\nHello, {0}!'.format(name)
 
 
-def main():
+def main():  # noqa: D103
     welcome_user()
 
 
