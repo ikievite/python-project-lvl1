@@ -15,8 +15,27 @@ def welcome_user():
     Returns:
         greeting and user`s name.
     """
-    name = prompt.string('May I have your name? ')
-    return '\nHello, {0}!'.format(name)
+    return prompt.string('May I have your name? ')
+
+
+def check_answer(answer_right, username):
+    """Funcrion checks correctness.
+
+    Args:
+        answer_right: tuple that contain anwer from username and correct answer
+        username: name of user :)
+
+    Returns:
+        answer 'Correct!'
+        or wrong and right answer
+    """
+    answer, right = answer_right
+    if answer == right:
+        output = 'Correct!'
+    else:
+        output = f"""'{answer}' is wrong answer ;(. Correct answer was '{right}'.
+Let's try again, {username}!"""
+    return output
 
 
 def check_even():
