@@ -1,6 +1,10 @@
 Hexlet Python Project
 
+Example: install and run brain-even
 [![asciicast](https://asciinema.org/a/mmhmMhSNMcyiNy41e0S0YypNC.svg)](https://asciinema.org/a/mmhmMhSNMcyiNy41e0S0YypNC)
+
+Example: install and run brain-calc
+[![asciicast](https://asciinema.org/a/64CIHn5cOhOblyUo56FZ2mKsU.svg)](https://asciinema.org/a/64CIHn5cOhOblyUo56FZ2mKsU)
 
 <a href="https://codeclimate.com/github/ikievite/python-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/00c5a4717ae36b17e69b/maintainability" /></a>
 
