@@ -15,7 +15,7 @@ Welcome to the Brain Games!
 What is the result of the expression?
 """)
     name = welcome_user()
-    print(f'Hello, {name}!')
+    print(f'Hello, {name}!\n')
     calc_logic(name)
 
 

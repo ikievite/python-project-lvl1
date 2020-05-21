@@ -13,7 +13,7 @@ def main():
     print('\nWelcome to the Brain Games!')  # noqa: WPS421
     print('Answer "yes" if number even otherwise answer "no".\n')  # noqa: WPS421
     name = welcome_user()
-    print(f'Hello, {name}!')
+    print(f'Hello, {name}!\n')
     even_logic(name)
 
 
