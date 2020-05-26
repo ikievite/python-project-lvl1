@@ -55,7 +55,3 @@ def calc_logic(name):
             break
     if right == 3:
         print(f'Congratulations, {name}')
-
-
-if __name__ == '__main__':
-    calc_logic()
