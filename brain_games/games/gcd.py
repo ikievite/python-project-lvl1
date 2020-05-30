@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 
 """Contains functions for script - brain_gcd."""
