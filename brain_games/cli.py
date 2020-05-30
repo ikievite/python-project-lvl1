@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 
 """File with functions."""
@@ -34,11 +33,3 @@ def check_answer(answer_right, username):
         output = f"""'{answer}' is wrong answer ;(. Correct answer was '{right}'.
 Let's try again, {username}!"""
     return output
-
-
-def main():  # noqa: D103
-    welcome_user()
-
-
-if __name__ == '__main__':
-    main()
