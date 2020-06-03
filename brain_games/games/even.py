@@ -5,47 +5,35 @@
 
 import random
 
-import prompt
-
-from brain_games.cli import check_answer
+from brain_games.cli import engine
 
 
-def ask_even(name):
-    """Func ask for an integer.
-
-    Args:
-        name: name of user
+def prepare_even_game():
+    """Func generate questions and right answer.
 
     Returns:
-        answer: for question
-        check: right answer
+        question: for question
+        right_answer: right calculated answer
     """
     random_number = random.randint(1, 100)
-    print(f'Question: {random_number}')
-    answer = prompt.string('Your answer: ')
+    question = f'Question: {random_number}\nYour answer: '
     if random_number % 2 == 0:
-        check = 'yes'
+        right_answer = 'yes'
     else:
-        check = 'no'
-    return answer, check
+        right_answer = 'no'
+    return (question, right_answer)
 
 
-def even_logic(name):
-    """Responses for logic Even Game: ask/check/print.
-
-    Args:
-        name: name of user
-    """
-    right = 0
+def run_even():
+    """Prepare data for game engine."""
+    game_description = """
+Welcome to the Brain Games!
+Answer "yes" if number even otherwise answer "no".
+                       """
+    number_games = 3
+    game_data = []
     i = 1
-    while i <= 3:
-        qa_result = check_answer(ask_even(name), name)
-        if qa_result == 'Correct!':
-            print(qa_result)
-            i += 1
-            right += 1
-        else:
-            print(qa_result)
-            break
-    if right == 3:
-        print(f'Congratulations, {name}')
+    while i <= number_games:
+        game_data.append(prepare_even_game())
+        i += 1
+    engine(game_description, game_data, number_games)

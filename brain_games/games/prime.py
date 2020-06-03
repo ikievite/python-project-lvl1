@@ -5,20 +5,15 @@
 
 import random
 
-import prompt
-
-from brain_games.cli import check_answer
+from brain_games.cli import engine
 
 
-def ask_prime(name):
-    """Set qurstions and write anwsers.
-
-    Args:
-        name: name of user
+def prepare_prime_game():
+    """Func generate questions and right answer.
 
     Returns:
-        answer: answer for question
-        rightr: right calculated answe
+        question: answer for question
+        right_answer: right calculated answer
     """
     digit = random.randint(1, 10)
     i = 1
@@ -27,29 +22,23 @@ def ask_prime(name):
             divider = i
         i += 1
         if divider > 1:
-            right = 'no'
+            right_answer = 'no'
         else:
-            right = 'yes'
-    answer = prompt.string(f'Is {digit} prime?: ')
-    return answer, right
+            right_answer = 'yes'
+    question = f'Is {digit} prime?: '
+    return question, right_answer
 
 
-def prime_logic(name):
-    """Responses for logic - game guess prime digit: ask/check/print.
-
-    Args:
-        name: name of user
-    """
-    right = 0
+def run_prime():
+    """Prepare data for game engine."""
+    game_desc = """
+Welcome to the Brain Games!
+Answer "yes" if given number is prime. Otherwise answer "no".
+                """
+    number_games = 3
+    game_data = []
     i = 1
-    while i <= 3:
-        qa_result = check_answer(ask_prime(name), name)
-        if qa_result == 'Correct!':
-            print(qa_result)
-            i += 1
-            right += 1
-        else:
-            print(qa_result)
-            break
-    if right == 3:
-        print(f'Congratulations, {name}')
+    while i <= number_games:
+        game_data.append(prepare_prime_game())
+        i += 1
+    engine(game_desc, game_data, number_games)

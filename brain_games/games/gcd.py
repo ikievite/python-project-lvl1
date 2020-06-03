@@ -5,9 +5,7 @@
 
 import random
 
-import prompt
-
-from brain_games.cli import check_answer
+from brain_games.cli import engine
 
 
 def find_divider(d):
@@ -28,11 +26,8 @@ def find_divider(d):
     return dividers
 
 
-def find_gcd(name):
-    """Set qurstions and write anwsers.
-
-    Args:
-        name: name of user
+def prepare_gcd_game():
+    """Func generate answers and right answers.
 
     Returns:
         answer: answer for question
@@ -43,26 +38,20 @@ def find_gcd(name):
     deviders_a = find_divider(random_a)
     deviders_b = find_divider(random_b)
     right_answer = max(set(deviders_a).intersection(set(deviders_b)))
-    answer = prompt.integer(f'Question: {random_a} {random_b}: \nYour answer: ')
+    answer = f'Question: {random_a} {random_b}: \nYour answer: '
     return answer, right_answer
 
 
-def gcd_logic(name):
-    """Respons for logic.
-
-    Args:
-        name: name of user
-    """
+def run_gcd():
+    """Prepare data for game engine."""
+    game_descr = """
+Welcome to the Brain Games!
+Find the greatest common divisor of given numbers.
+                 """
+    number_games = 3
+    game_data = []
     i = 1
-    right = 0
-    while i <= 3:
-        qa_result = check_answer(find_gcd(name), name)
-        if qa_result == 'Correct!':
-            print(qa_result)
-            i += 1
-            right += 1
-        else:
-            print(qa_result)
-            break
-    if right == 3:
-        print(f'Congratulations, {name}')
+    while i <= number_games:
+        game_data.append(prepare_gcd_game())
+        i += 1
+    engine(game_descr, game_data, number_games)

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 
 """File contains functions for script - brain_calc."""
@@ -6,52 +5,39 @@
 
 import random
 
-import prompt
-
-from brain_games.cli import check_answer
+from brain_games.cli import engine
 
 
-def ask_reply(name):
-    """Set qurstions and write anwsers.
-
-    Args:
-        name: name of user
+def prepare_calc_game():
+    """Func generate questions and right answer.
 
     Returns:
-        answer: answer for question
+        question: answer for question
         right_answer: right calculated answer
     """
-    operation = random.choice('+-*')
+    operator = random.choice('+-*')
     random_a = random.randint(1, 10)
     random_b = random.randint(1, 10)
-    if operation == '+':
-        answer = prompt.integer(f'Question: {random_a} + {random_b}: ')
+    question = f'Question: {random_a} {operator} {random_b}: '
+    if operator == '+':
         right_answer = random_a + random_b
-    elif operation == '-':
-        answer = prompt.integer(f'Question: {random_a} - {random_b}: ')
+    elif operator == '-':
         right_answer = random_a - random_b
-    elif operation == '*':
-        answer = prompt.integer(f'Question: {random_a} * {random_b}: ')
+    elif operator == '*':
         right_answer = random_a * random_b
-    return answer, right_answer
+    return (question, right_answer)
 
 
-def calc_logic(name):
-    """Responses for logic: ask/check/print.
-
-    Args:
-        name: name of user
-    """
+def run_calc():
+    """Prepare data for game engine."""
+    game_descr = """
+Welcome to the Brain Games!
+What is the result of the expression?
+                 """
+    number_games = 3
+    game_data = []
     i = 1
-    right = 0
-    while i <= 3:
-        qa_result = check_answer(ask_reply(name), name)
-        if qa_result == 'Correct!':
-            print(qa_result)
-            i += 1
-            right += 1
-        else:
-            print(qa_result)
-            break
-    if right == 3:
-        print(f'Congratulations, {name}')
+    while i <= number_games:
+        game_data.append(prepare_calc_game())
+        i += 1
+    engine(game_descr, game_data, number_games)

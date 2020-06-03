@@ -1,25 +1,19 @@
 
 
-"""File contains functions for script - brain_calc."""
+"""File contains functions for script - brain_progression."""
 
 
 import random
 
-import prompt
-
-from brain_games.cli import check_answer
+from brain_games.cli import engine
 
 
-def ask_prog(name):
-    """Func asl answeer hidden digit in progression.
-
-    Args:
-        name: name of user
+def generate_progression():
+    """Generate questions and right answers.
 
     Returns:
-        answer: for question
+        question: for question
         correct: right answer
-
     """
     start = random.randint(1, 10)
     step = random.randint(1, 10)
@@ -35,27 +29,20 @@ def ask_prog(name):
         start += step
         i += 1
     line = line.strip()
-    print(f'Question: {line}')
-    answer = prompt.integer('.. == ')
-    return answer, correct
+    question = f'Question: {line}\n.. == '
+    return (question, correct)
 
 
-def progression_logic(name):
-    """Responses for logic Fing Progression Game: ask/check/print.
-
-    Args:
-        name: name of user
-    """
-    right = 0
+def run_progression():
+    """Prepare data for game engine."""
+    game_desc = """
+Welcome to the Brain Games!
+What number is missing in the progression?
+               """
+    number_games = 3
+    game_data = []
     i = 1
-    while i <= 3:
-        qa_result = check_answer(ask_prog(name), name)
-        if qa_result == 'Correct!':
-            print(qa_result)
-            i += 1
-            right += 1
-        else:
-            print(qa_result)
-            break
-    if right == 3:
-        print(f'Congratulations, {name}')
+    while i <= number_games:
+        game_data.append(generate_progression())
+        i += 1
+    engine(game_desc, game_data, number_games)
