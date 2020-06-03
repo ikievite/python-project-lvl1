@@ -4,17 +4,12 @@
 """Check for Even."""
 
 
-from brain_games.cli import welcome_user
-from brain_games.games.even import even_logic
+from brain_games.games.even import run_even
 
 
 def main():
-    """Func responses for main logic."""
-    print('\nWelcome to the Brain Games!')  # noqa: WPS421
-    print('Answer "yes" if number even otherwise answer "no".\n')  # noqa: WPS421
-    name = welcome_user()
-    print(f'Hello, {name}!\n')
-    even_logic(name)
+    """Run Even Game."""
+    run_even()
 
 
 if __name__ == '__main__':

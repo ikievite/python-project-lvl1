@@ -4,19 +4,12 @@
 """Find General Common Divider."""
 
 
-from brain_games.cli import welcome_user
-from brain_games.games.gcd import gcd_logic
+from brain_games.games.gcd import run_gcd
 
 
 def main():
-    """Responses for main logic."""
-    print("""
-Welcome to the Brain Games!
-Find the greatest common divisor of given numbers.
-          """)
-    name = welcome_user()
-    print(f'Hello, {name}!\n')
-    gcd_logic(name)
+    """Run GCD Game."""
+    run_gcd()
 
 
 if __name__ == '__main__':
