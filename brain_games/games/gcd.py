@@ -48,10 +48,10 @@ def run_gcd():
 Welcome to the Brain Games!
 Find the greatest common divisor of given numbers.
                  """
-    number_games = 3
+    games_count = 3
     game_data = []
     i = 1
-    while i <= number_games:
+    while i <= games_count:
         game_data.append(prepare_gcd_game())
         i += 1
-    engine(game_descr, game_data, number_games)
+    engine(game_descr, game_data, games_count)

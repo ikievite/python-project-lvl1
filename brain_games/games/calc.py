@@ -34,10 +34,10 @@ def run_calc():
 Welcome to the Brain Games!
 What is the result of the expression?
                  """
-    number_games = 3
+    games_count = 3
     game_data = []
     i = 1
-    while i <= number_games:
+    while i <= games_count:
         game_data.append(prepare_calc_game())
         i += 1
-    engine(game_descr, game_data, number_games)
+    engine(game_descr, game_data, games_count)

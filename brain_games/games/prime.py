@@ -35,10 +35,10 @@ def run_prime():
 Welcome to the Brain Games!
 Answer "yes" if given number is prime. Otherwise answer "no".
                 """
-    number_games = 3
+    games_count = 3
     game_data = []
     i = 1
-    while i <= number_games:
+    while i <= games_count:
         game_data.append(prepare_prime_game())
         i += 1
-    engine(game_desc, game_data, number_games)
+    engine(game_desc, game_data, games_count)

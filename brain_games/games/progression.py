@@ -39,10 +39,10 @@ def run_progression():
 Welcome to the Brain Games!
 What number is missing in the progression?
                """
-    number_games = 3
+    games_count = 3
     game_data = []
     i = 1
-    while i <= number_games:
+    while i <= games_count:
         game_data.append(generate_progression())
         i += 1
-    engine(game_desc, game_data, number_games)
+    engine(game_desc, game_data, games_count)

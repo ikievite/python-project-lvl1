@@ -30,10 +30,10 @@ def run_even():
 Welcome to the Brain Games!
 Answer "yes" if number even otherwise answer "no".
                        """
-    number_games = 3
+    games_count = 3
     game_data = []
     i = 1
-    while i <= number_games:
+    while i <= games_count:
         game_data.append(prepare_even_game())
         i += 1
-    engine(game_description, game_data, number_games)
+    engine(game_description, game_data, games_count)
