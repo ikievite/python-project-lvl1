@@ -16,7 +16,7 @@ def prepare_even_game():
         right_answer: right calculated answer
     """
     random_number = random.randint(1, 100)
-    question = f'Question: {random_number}\nYour answer: '
+    question = f'{random_number}\nYour answer: '
     if random_number % 2 == 0:
         right_answer = 'yes'
     else:

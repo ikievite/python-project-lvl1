@@ -25,7 +25,7 @@ def prepare_prime_game():
             right_answer = 'no'
         else:
             right_answer = 'yes'
-    question = f'Is {digit} prime?: '
+    question = f'is {digit} prime?: '
     return question, right_answer
 
 

@@ -29,7 +29,7 @@ def generate_progression():
         start += step
         i += 1
     line = line.strip()
-    question = f'Question: {line}\n.. == '
+    question = f'{line}\n.. == '
     return (question, correct)
 
 

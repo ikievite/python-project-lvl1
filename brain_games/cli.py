@@ -49,6 +49,7 @@ def engine(description, entries, number_games):
     count = 0
     for i in entries:
         question, right_answer = i
+        question = f'Question: {question}'
         if isinstance(right_answer, int):
             answer = prompt.integer(question)
         elif isinstance(right_answer, str):

@@ -38,7 +38,7 @@ def prepare_gcd_game():
     deviders_a = find_divider(random_a)
     deviders_b = find_divider(random_b)
     right_answer = max(set(deviders_a).intersection(set(deviders_b)))
-    answer = f'Question: {random_a} {random_b}: \nYour answer: '
+    answer = f'{random_a} {random_b}: \nYour answer: '
     return answer, right_answer
 
 

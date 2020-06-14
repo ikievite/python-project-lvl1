@@ -18,7 +18,7 @@ def prepare_calc_game():
     operator = random.choice('+-*')
     random_a = random.randint(1, 10)
     random_b = random.randint(1, 10)
-    question = f'Question: {random_a} {operator} {random_b}: '
+    question = f'{random_a} {operator} {random_b}: '
     if operator == '+':
         right_answer = random_a + random_b
     elif operator == '-':
