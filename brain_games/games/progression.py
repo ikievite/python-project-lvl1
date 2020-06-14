@@ -35,10 +35,7 @@ def generate_progression():
 
 def run_progression():
     """Prepare data for game engine."""
-    game_desc = """
-Welcome to the Brain Games!
-What number is missing in the progression?
-               """
+    game_desc = 'What number is missing in the progression?'
     games_count = 3
     game_data = []
     i = 1

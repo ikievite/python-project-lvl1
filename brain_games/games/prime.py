@@ -31,10 +31,7 @@ def prepare_prime_game():
 
 def run_prime():
     """Prepare data for game engine."""
-    game_desc = """
-Welcome to the Brain Games!
-Answer "yes" if given number is prime. Otherwise answer "no".
-                """
+    game_desc = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     games_count = 3
     game_data = []
     i = 1

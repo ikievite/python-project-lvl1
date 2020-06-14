@@ -44,10 +44,7 @@ def prepare_gcd_game():
 
 def run_gcd():
     """Prepare data for game engine."""
-    game_descr = """
-Welcome to the Brain Games!
-Find the greatest common divisor of given numbers.
-                 """
+    game_descr = 'Find the greatest common divisor of given numbers.'
     games_count = 3
     game_data = []
     i = 1

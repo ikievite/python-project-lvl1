@@ -30,10 +30,7 @@ def prepare_calc_game():
 
 def run_calc():
     """Prepare data for game engine."""
-    game_descr = """
-Welcome to the Brain Games!
-What is the result of the expression?
-                 """
+    game_descr = 'What is the result of the expression?'
     games_count = 3
     game_data = []
     i = 1
