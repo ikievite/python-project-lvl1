@@ -7,10 +7,17 @@ import prompt
 
 
 def welcome_user():
+    """Func welcomes gamer."""
+    print('Welcome to the Brain Games!\n')
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+
+
+def ask_name():
     """Func asks user`s name.
 
     Returns:
-        greeting and user`s name.
+        username.
     """
     return prompt.string('May I have your name? ')
 
@@ -45,7 +52,7 @@ def engine(description, entries, number_games):
     """
     print('Welcome to the Brain Games!\n')
     print(description + '\n')
-    name = welcome_user()
+    name = ask_name()
     count = 0
     for i in entries:
         question, right_answer = i
