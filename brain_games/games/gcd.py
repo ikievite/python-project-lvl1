@@ -8,22 +8,27 @@ import random
 from brain_games.cli import engine
 
 
-def find_divider(d):
+def find_gcd(a, b):
     """Find dividers.
 
     Args:
-        d: digit
+        a: digits
+        b: digit
 
     Returns:
         dividers: list with dividers
     """
-    dividers = []
-    i = 1
-    while d >= i:
-        if d % i == 0:
-            dividers.append(i)
-        i += 1
-    return dividers
+    dict_dividers = {}
+    for d in a, b:
+        i = 1
+        dividers = []
+        while d >= i:
+            if d % i == 0:
+                dividers.append(i)
+            i += 1
+        dict_dividers[d] = dividers
+    gcd = set(dict_dividers[a]).intersection(set(dict_dividers[b]))
+    return max(gcd)
 
 
 def prepare_gcd_game():
@@ -35,11 +40,9 @@ def prepare_gcd_game():
     """
     random_a = random.randint(1, 100)
     random_b = random.randint(1, 100)
-    deviders_a = find_divider(random_a)
-    deviders_b = find_divider(random_b)
-    right_answer = max(set(deviders_a).intersection(set(deviders_b)))
+    gcd = find_gcd(random_a, random_b)
     answer = f'{random_a} {random_b}: \nYour answer: '
-    return answer, right_answer
+    return answer, gcd
 
 
 def run_gcd():
