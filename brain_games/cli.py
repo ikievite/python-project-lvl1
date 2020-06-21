@@ -50,7 +50,7 @@ def engine(description, entries, number_games):
         entries: list with tuples, tuple contain question and right answer
         number_games: number of games that user can execute
     """
-    print('Welcome to the Brain Games!\n')
+    print('Welcome to the Brain Games!')
     print(description + '\n')
     name = ask_name()
     count = 0
