@@ -8,6 +8,25 @@ import random
 from brain_games.cli import engine
 
 
+def is_prime(digit):
+    """Func checks is digit prime.
+
+    Args:
+        digit: fot checking
+
+    Returns:
+        bool value
+    """
+    if digit == 1:
+        return False
+    i = 1
+    while i < digit:
+        if digit % i == 0:
+            divider = i
+        i += 1
+    return divider == 1
+
+
 def prepare_prime_game():
     """Func generate questions and right answer.
 
@@ -16,15 +35,10 @@ def prepare_prime_game():
         right_answer: right calculated answer
     """
     digit = random.randint(1, 10)
-    i = 1
-    while i < digit:
-        if digit % i == 0:
-            divider = i
-        i += 1
-        if divider > 1:
-            right_answer = 'no'
-        else:
-            right_answer = 'yes'
+    if is_prime(digit):
+        right_answer = 'yes'
+    else:
+        right_answer = 'no'
     question = f'is {digit} prime?: '
     return question, right_answer
 
