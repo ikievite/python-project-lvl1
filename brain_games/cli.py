@@ -49,7 +49,6 @@ def engine(description, entries, number_games):
         number_games: number of games that user can execute
     """
     welcome_user()
-#    print('Welcome to the Brain Games!')
     print(description + '\n')
     name = ask_name()
     count = 0
