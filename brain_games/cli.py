@@ -8,9 +8,7 @@ import prompt
 
 def welcome_user():
     """Func welcomes gamer."""
-    print('Welcome to the Brain Games!\n')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
+    print('Welcome to the Brain Games!')
 
 
 def ask_name():
