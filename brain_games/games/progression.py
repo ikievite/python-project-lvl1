@@ -8,19 +8,23 @@ import random
 from brain_games.cli import engine
 
 
-def generate_progression():
+def generate_progression(min_element, max_element):
     """Generate questions and right answers.
+
+    Args:
+        min_element: min element of progression
+        max_element: max element of progression
 
     Returns:
         question: for question
         correct: right answer
     """
-    start = random.randint(1, 10)
-    step = random.randint(1, 10)
-    hidden = random.randint(1, 10)
+    start = random.randint(min_element, max_element)
+    step = random.randint(min_element, max_element)
+    hidden = random.randint(min_element, max_element)
     i = 1
     line = ''
-    while i <= 10:
+    while i <= max_element:
         if i == hidden:
             line = line + ' ..'
             correct = start
@@ -36,10 +40,12 @@ def generate_progression():
 def run_progression():
     """Prepare data for game engine."""
     game_desc = 'What number is missing in the progression?'
+    min_element = 1
+    max_element = 10
     games_count = 3
     game_data = []
     i = 1
     while i <= games_count:
-        game_data.append(generate_progression())
+        game_data.append(generate_progression(min_element, max_element))
         i += 1
     engine(game_desc, game_data, games_count)
