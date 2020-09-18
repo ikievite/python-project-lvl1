@@ -20,26 +20,6 @@ def ask_name():
     return prompt.string('May I have your name? ')
 
 
-def check_answer(answer_right, username):
-    """Funcrion checks correctness.
-
-    Args:
-        answer_right: tuple that contain anwer from username and correct answer
-        username: name of user :)
-
-    Returns:
-        answer 'Correct!'
-        or wrong and right answer
-    """
-    answer, right = answer_right
-    if answer == right:
-        output = 'Correct!'
-    else:
-        output = f"""'{answer}' is wrong answer ;(. Correct answer was '{right}'.
-Let's try again, {username}!"""
-    return output
-
-
 def engine(description, entries, number_games):
     """Make for game logic.
 
