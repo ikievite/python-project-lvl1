@@ -37,10 +37,7 @@ def engine(description, entries, number_games):
     for i in entries:
         question, right_answer = i
         question = f'Question: {question}'
-        if isinstance(right_answer, int):
-            answer = prompt.integer(question)
-        elif isinstance(right_answer, str):
-            answer = prompt.string(question)
+        answer = prompt.string(question)
         if answer == right_answer:
             print('Correct!')
             count += 1

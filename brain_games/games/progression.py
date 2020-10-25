@@ -34,7 +34,7 @@ def generate_progression(min_element, max_element):
         i += 1
     line = line.strip()
     question = f'{line}\n.. == '
-    return (question, correct)
+    return (question, str(correct))
 
 
 def run_progression():
