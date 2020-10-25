@@ -5,7 +5,7 @@
 
 import random
 
-from brain_games.cli import engine
+from brain_games.cli import engine, games_count
 
 
 def generate_progression(min_element, max_element):
@@ -42,7 +42,6 @@ def run_progression():
     game_desc = 'What number is missing in the progression?'
     min_element = 1
     max_element = 10
-    games_count = 3
     game_data = []
     i = 1
     while i <= games_count:

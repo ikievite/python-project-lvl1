@@ -5,7 +5,7 @@
 
 import random
 
-from brain_games.cli import engine
+from brain_games.cli import engine, games_count
 
 
 def find_gcd(a, b):
@@ -48,7 +48,6 @@ def prepare_gcd_game():
 def run_gcd():
     """Prepare data for game engine."""
     game_descr = 'Find the greatest common divisor of given numbers.'
-    games_count = 3
     game_data = []
     i = 1
     while i <= games_count:

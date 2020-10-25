@@ -5,7 +5,7 @@
 
 import random
 
-from brain_games.cli import engine
+from brain_games.cli import engine, games_count
 
 
 def prepare_even_game():
@@ -27,7 +27,6 @@ def prepare_even_game():
 def run_even():
     """Prepare data for game engine."""
     game_description = 'Answer "yes" if number even otherwise answer "no".'
-    games_count = 3
     game_data = []
     i = 1
     while i <= games_count:

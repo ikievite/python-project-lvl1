@@ -5,6 +5,8 @@
 
 import prompt
 
+games_count = 3
+
 
 def welcome_user():
     """Func welcomes gamer."""

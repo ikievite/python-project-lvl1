@@ -5,7 +5,7 @@
 
 import random
 
-from brain_games.cli import engine
+from brain_games.cli import engine, games_count
 
 
 def is_prime(digit):
@@ -46,7 +46,6 @@ def prepare_prime_game():
 def run_prime():
     """Prepare data for game engine."""
     game_desc = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    games_count = 3
     game_data = []
     i = 1
     while i <= games_count:
