@@ -5,7 +5,7 @@
 
 import random
 
-from brain_games.cli import engine, games_count
+from brain_games.cli import engine, number_games
 
 
 def generate_progression(min_element, max_element):
@@ -44,7 +44,7 @@ def run_progression():
     max_element = 10
     game_data = []
     i = 1
-    while i <= games_count:
+    while i <= number_games:
         game_data.append(generate_progression(min_element, max_element))
         i += 1
-    engine(game_desc, game_data, games_count)
+    engine(game_desc, game_data)

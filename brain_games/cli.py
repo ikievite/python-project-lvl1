@@ -5,7 +5,7 @@
 
 import prompt
 
-games_count = 3
+number_games = 3
 
 
 def welcome_user():
@@ -22,13 +22,12 @@ def ask_name():
     return prompt.string('May I have your name? ')
 
 
-def engine(description, entries, number_games):
+def engine(description, entries):
     """Make for game logic.
 
     Args:
         description: of game
         entries: list with tuples, tuple contain question and right answer
-        number_games: number of games that user can execute
     """
     welcome_user()
     print(description + '\n')
