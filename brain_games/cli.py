@@ -43,6 +43,5 @@ def engine(description, entries):
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'.")
             print(f"Let's try again, {name}!")
-            break
-    if count == number_games:
+            return
         print(f'Congratulations, {name}')
