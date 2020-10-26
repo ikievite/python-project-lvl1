@@ -33,8 +33,8 @@ def engine(description, entries):
     print(description + '\n')
     name = ask_name()
     count = 0
-    for i in entries:
-        question, right_answer = i
+    while count < number_games:
+        question, right_answer = entries[count]
         question = f'Question: {question}'
         answer = prompt.string(question)
         if answer == right_answer:
@@ -44,4 +44,6 @@ def engine(description, entries):
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'.")
             print(f"Let's try again, {name}!")
             return
+#        print(f'Congratulations, {name}')
+    else:
         print(f'Congratulations, {name}')
