@@ -13,15 +13,6 @@ def welcome_user():
     print('Welcome to the Brain Games!')
 
 
-def ask_name():
-    """Func asks user`s name.
-
-    Returns:
-        username.
-    """
-    return prompt.string('May I have your name? ')
-
-
 def engine(description, entries):
     """Make for game logic.
 
@@ -31,7 +22,7 @@ def engine(description, entries):
     """
     welcome_user()
     print(description + '\n')
-    name = ask_name()
+    name = prompt.string('May I have your name? ')
     count = 0
     while count < number_games:
         question, right_answer = entries[count]
