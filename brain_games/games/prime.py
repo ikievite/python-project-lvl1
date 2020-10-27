@@ -12,15 +12,15 @@ def is_prime(digit):
     """Func checks is digit prime.
 
     Args:
-        digit: fot checking
+        digit: for checking
 
     Returns:
         bool value
     """
-    if digit == 1:
+    if digit < 2:
         return False
     i = 1
-    while i < digit:
+    while i <= digit / 2:
         if digit % i == 0:
             divider = i
         i += 1
@@ -34,7 +34,7 @@ def prepare_prime_game():
         question: answer for question
         right_answer: right calculated answer
     """
-    digit = random.randint(1, 10)
+    digit = random.randint(0, 10)
     if is_prime(digit):
         right_answer = 'yes'
     else:
