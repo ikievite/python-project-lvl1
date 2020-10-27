@@ -8,7 +8,7 @@ import random
 from brain_games.cli import engine, number_games
 
 
-def generate_progression(min_element, max_element):
+def prepare_progression_game(min_element, max_element):
     """Generate questions and right answers.
 
     Args:
@@ -45,6 +45,6 @@ def run_progression():
     game_data = []
     i = 1
     while i <= number_games:
-        game_data.append(generate_progression(min_element, max_element))
+        game_data.append(prepare_progression_game(min_element, max_element))
         i += 1
     engine(game_desc, game_data)
