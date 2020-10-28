@@ -4,7 +4,17 @@ Brain Games -- set of five console games.
 
 Each game asks questions that need to be answered correctly.
 
-Games: calculator, progression, defintioin of an even number, determination of the greatest common divider, definition of a prime number.
+Games: 
+ - brain-calc: calculator
+ - brain-progression: find missing numbers in a sequence
+ - brain-even: definitioin of an even number
+ - brain-gcd: determination of the greatest common divider
+ - brain-prime: definition of a prime number
+
+INSTALLATION: 
+ pip install -i https://test.pypi.org/simple/ ikievite-brain-games 
+
+For running just call game (examples below)
 
 <a href="https://codeclimate.com/github/ikievite/python-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/00c5a4717ae36b17e69b/maintainability" /></a>
 
