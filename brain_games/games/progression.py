@@ -39,7 +39,7 @@ def prepare_progression_game(min_element, max_element):
 
 def run_progression():
     """Prepare data for game engine."""
-    game_desc = 'What number is missing in the progression?'
+    game_description = 'What number is missing in the progression?'
     min_element = 1
     max_element = 10
     game_data = []
@@ -47,4 +47,4 @@ def run_progression():
     while i <= number_games:
         game_data.append(prepare_progression_game(min_element, max_element))
         i += 1
-    engine(game_desc, game_data)
+    engine(game_description, game_data)

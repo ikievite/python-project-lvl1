@@ -44,10 +44,10 @@ def prepare_gcd_game():
 
 def run_gcd():
     """Prepare data for game engine."""
-    game_descr = 'Find the greatest common divisor of given numbers.'
+    game_description = 'Find the greatest common divisor of given numbers.'
     game_data = []
     i = 1
     while i <= number_games:
         game_data.append(prepare_gcd_game())
         i += 1
-    engine(game_descr, game_data)
+    engine(game_description, game_data)
