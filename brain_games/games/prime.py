@@ -19,12 +19,13 @@ def is_prime(digit):
     """
     if digit < 2:
         return False
-    i = 1
+    i = 2
     while i <= digit / 2:
         if digit % i == 0:
-            divider = i
-        i += 1
-    return divider == 1
+            return False
+        else:
+            i += 1
+    return True
 
 
 def prepare_prime_game():
