@@ -23,17 +23,17 @@ def prepare_progression_game(min_element, max_element):
     step = random.randint(min_element, max_element)
     hidden = random.randint(min_element, max_element)
     i = 1
-    line = ''
+    question = ''
     while i <= max_element:
         if i == hidden:
-            line = line + ' ..'
+            question = question + ' ..'
             correct = start
         else:
-            line = line + ' ' + str(start)
+            question = question + ' ' + str(start)
         start += step
         i += 1
-    line = line.strip()
-    question = f'{line}\n.. == '
+    question = question.strip()
+    question = f'{question}\n.. == '
     return (question, str(correct))
 
 
