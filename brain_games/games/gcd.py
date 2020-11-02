@@ -8,8 +8,8 @@ import random
 from brain_games.cli import engine, number_games
 
 
-def euclid_gcd(int1, int2):
-    """Find dividers.
+def find_gcd(int1, int2):
+    """Find dividers via Euclidean algorithm.
 
     Args:
         int1: digit1
@@ -37,7 +37,7 @@ def prepare_gcd_game():
     """
     random_a = random.randint(1, 100)
     random_b = random.randint(1, 100)
-    gcd = euclid_gcd(random_a, random_b)
+    gcd = find_gcd(random_a, random_b)
     answer = f'{random_a} {random_b}: \nYour answer: '
     return answer, str(gcd)
 
