@@ -1,3 +1,7 @@
+<a href="https://codeclimate.com/github/ikievite/python-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/00c5a4717ae36b17e69b/maintainability" /></a>
+
+[![Build Status](https://travis-ci.org/ikievite/python-project-lvl1.svg?branch=master)](https://travis-ci.org/ikievite/python-project-lvl1)
+
 Hexlet Python Project
 
 Brain Games -- set of five console games.
@@ -15,8 +19,6 @@ INSTALLATION:
  pip install -i https://test.pypi.org/simple/ ikievite-brain-games 
 
 For running just call game (examples below)
-
-<a href="https://codeclimate.com/github/ikievite/python-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/00c5a4717ae36b17e69b/maintainability" /></a>
 
 [![Build Status](https://travis-ci.org/ikievite/python-project-lvl1.svg?branch=master)](https://travis-ci.org/ikievite/python-project-lvl1)
 
