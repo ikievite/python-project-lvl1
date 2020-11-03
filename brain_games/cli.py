@@ -5,7 +5,7 @@
 
 import prompt
 
-number_games = 3
+number_of_games = 3
 
 
 def welcome_user():
@@ -24,7 +24,7 @@ def engine(description, entries):
     print(description + '\n')
     name = prompt.string('May I have your name? ')
     count = 0
-    while count < number_games:
+    while count < number_of_games:
         question, right_answer = entries[count]
         question = f'Question: {question}'
         answer = prompt.string(question)

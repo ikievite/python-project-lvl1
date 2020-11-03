@@ -5,7 +5,7 @@
 
 import random
 
-from brain_games.cli import engine, number_games
+from brain_games.cli import engine, number_of_games
 
 
 def prepare_calc_game():
@@ -33,7 +33,7 @@ def run_calc():
     game_description = 'What is the result of the expression?'
     game_data = []
     i = 1
-    while i <= number_games:
+    while i <= number_of_games:
         game_data.append(prepare_calc_game())
         i += 1
     engine(game_description, game_data)
