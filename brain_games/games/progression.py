@@ -33,7 +33,6 @@ def prepare_progression_game(min_element, max_element):
         start += step
         i += 1
     question = question.strip()
-    question = f'{question}\n.. == '
     return (question, str(correct))
 
 
