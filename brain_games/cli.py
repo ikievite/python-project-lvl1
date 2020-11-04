@@ -8,11 +8,6 @@ import prompt
 number_of_games = 3
 
 
-def welcome_user():
-    """Func welcomes gamer."""
-    print('Welcome to the Brain Games!')
-
-
 def engine(description, entries):
     """Make for game logic.
 
@@ -20,7 +15,7 @@ def engine(description, entries):
         description: of game
         entries: list with tuples, tuple contain question and right answer
     """
-    welcome_user()
+    print('Welcome to the Brain Games!')
     print(description + '\n')
     name = prompt.string('May I have your name? ')
     count = 0
