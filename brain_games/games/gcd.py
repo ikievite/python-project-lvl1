@@ -38,7 +38,7 @@ def prepare_gcd_game():
     random_a = random.randint(1, 100)
     random_b = random.randint(1, 100)
     gcd = find_gcd(random_a, random_b)
-    answer = f'{random_a} {random_b}: \nYour answer: '
+    answer = f'{random_a} {random_b}'
     return answer, str(gcd)
 
 
