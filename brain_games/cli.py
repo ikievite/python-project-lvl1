@@ -16,13 +16,14 @@ def engine(description, entries):
         entries: list with tuples, tuple contain question and right answer
     """
     print('Welcome to the Brain Games!')
-    print(description + '\n')
     name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+    print(description + '\n')
     count = 0
     while count < number_of_games:
         question, right_answer = entries[count]
-        question = f'Question: {question}'
-        answer = prompt.string(question)
+        print(f'Question: {question}')
+        answer = prompt.string('Your answer: ')
         if answer == right_answer:
             print('Correct!')
             count += 1
