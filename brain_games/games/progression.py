@@ -5,10 +5,10 @@
 
 import random
 
-from brain_games.cli import engine, number_of_games
+from brain_games.cli import engine
 
 
-def prepare_progression_game(min_element, max_element):
+def prepare_progression_game():
     """Generate questions and right answers.
 
     Args:
@@ -19,6 +19,8 @@ def prepare_progression_game(min_element, max_element):
         question: for question
         correct: right answer
     """
+    min_element = 1
+    max_element = 10
     start = random.randint(min_element, max_element)
     step = random.randint(min_element, max_element)
     hidden = random.randint(min_element, max_element)
@@ -39,11 +41,4 @@ def prepare_progression_game(min_element, max_element):
 def run_progression():
     """Prepare data for game engine."""
     game_description = 'What number is missing in the progression?'
-    min_element = 1
-    max_element = 10
-    game_data = []
-    i = 1
-    while i <= number_of_games:
-        game_data.append(prepare_progression_game(min_element, max_element))
-        i += 1
-    engine(game_description, game_data)
+    engine(game_description, prepare_progression_game)
