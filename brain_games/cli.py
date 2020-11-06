@@ -8,12 +8,12 @@ import prompt
 number_of_games = 3
 
 
-def engine(description, entries):
+def engine(description, game_data):
     """Make for game logic.
 
     Args:
         description: of game
-        entries: list with tuples, tuple contain question and right answer
+        game_data: function from game that generate tuple with question and right answer
     """
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
@@ -21,7 +21,7 @@ def engine(description, entries):
     print(description + '\n')
     count = 0
     while count < number_of_games:
-        question, right_answer = entries[count]
+        question, right_answer = game_data()
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
         if answer == right_answer:
