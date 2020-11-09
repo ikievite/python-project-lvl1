@@ -11,10 +11,6 @@ from brain_games.cli import engine
 def prepare_progression_game():
     """Generate questions and right answers.
 
-    Args:
-        min_element: min element of progression
-        max_element: max element of progression
-
     Returns:
         question: for question
         correct: right answer
