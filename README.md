@@ -20,8 +20,6 @@ INSTALLATION:
 
 For running just call game (examples below)
 
-[![Build Status](https://travis-ci.org/ikievite/python-project-lvl1.svg?branch=master)](https://travis-ci.org/ikievite/python-project-lvl1)
-
 Example: install and run brain-even
 [![asciicast](https://asciinema.org/a/x7BN4RcyLNq8dyU6BpBkN6EjG.svg)](https://asciinema.org/a/x7BN4RcyLNq8dyU6BpBkN6EjG)
 
