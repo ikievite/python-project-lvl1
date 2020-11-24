@@ -35,7 +35,7 @@ def prepare_progression_game():
         start += step
         i += 1
     question = question.strip()
-    return (question, str(correct))
+    return question, str(correct)
 
 
 def run_progression():
