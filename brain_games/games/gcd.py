@@ -18,14 +18,14 @@ def find_gcd(int1, int2):
     Returns:
         max divider
     """
-    a = max(int1, int2)
-    b = min(int1, int2)
-    while b != 0:
-        r = a % b
-        a = b
-        b = r
+    highest_num = max(int1, int2)
+    lowest_num = min(int1, int2)
+    while lowest_num != 0:
+        result_of_division = highest_num % lowest_num
+        highest_num = lowest_num
+        lowest_num = result_of_division
     else:
-        return a
+        return highest_num
 
 
 def prepare_gcd_game():
