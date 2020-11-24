@@ -25,7 +25,7 @@ def prepare_calc_game():
         right_answer = random_a - random_b
     elif operator == '*':
         right_answer = random_a * random_b
-    return (question, str(right_answer))
+    return question, str(right_answer)
 
 
 def run_calc():
