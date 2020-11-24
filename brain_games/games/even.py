@@ -21,7 +21,7 @@ def prepare_even_game():
         right_answer = 'yes'
     else:
         right_answer = 'no'
-    return (question, right_answer)
+    return question, right_answer
 
 
 def run_even():
