@@ -15,6 +15,9 @@ Games:
  - brain-gcd: determination of the greatest common divider
  - brain-prime: definition of a prime number
 
+Docker container: https://hub.docker.com/r/ikievite/brain_games
+Example: docker run -it ikievite/brain_games {name-of-game}
+
 INSTALLATION: 
  pip install -i https://test.pypi.org/simple/ ikievite-brain-games 
 
